@@ -22,7 +22,7 @@
     />
     <Card.Header class="w-1/2 mr-auto">
       <Card.Title class="">
-        <span class="strike-anim" class:completed={toDo.completed}>
+        <span class="strike-anim" class:line-through={toDo.completed}>
           {toDo.text}
         </span>
       </Card.Title>
