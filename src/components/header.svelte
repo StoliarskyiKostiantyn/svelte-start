@@ -16,6 +16,12 @@
   <a href="https://svelte.dev" target="_blank" rel="noreferrer">
     <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
   </a>
+  <div>
+    <a href="#/task-manager">Task Manager</a>
+  </div>
+  <div>
+    <a href="#/gift-card">Gift Card</a>
+  </div>
   <Button
     class="ml-auto mr-4 flex items-center justify-center relative"
     disabled={false}

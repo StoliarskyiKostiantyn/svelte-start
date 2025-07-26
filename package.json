@@ -23,6 +23,7 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
-    "mode-watcher": "^1.0.8"
+    "mode-watcher": "^1.0.8",
+    "svelte-spa-router": "^4.0.1"
   }
 }
