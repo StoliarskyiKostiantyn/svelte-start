@@ -4,7 +4,8 @@
   import * as Card from "$lib/components/ui/card/index.js";
   import { Checkbox } from "$lib/components/ui/checkbox/index.js";
   import { removeTodo, toggleTodo } from "../stores/todos.svelte";
-  export let toDo;
+  let { todo } = $props();
+  $inspect("TodoCard", todo);
 </script>
 
 <div
@@ -17,13 +18,13 @@
   >
     <Checkbox
       class=""
-      checked={toDo.completed}
-      onCheckedChange={() => toggleTodo(toDo.id)}
+      checked={todo.completed}
+      onCheckedChange={() => toggleTodo(todo.id)}
     />
     <Card.Header class="w-1/2 mr-auto">
       <Card.Title class="">
-        <span class="strike-anim" class:line-through={toDo.completed}>
-          {toDo.text}
+        <span class="strike-anim" class:line-through={todo.completed}>
+          {todo.text}
         </span>
       </Card.Title>
     </Card.Header>
@@ -32,7 +33,7 @@
         disabled={false}
         type="button"
         class="w-full"
-        onclick={() => removeTodo(toDo.id)}>Delete TODO</Button
+        onclick={() => removeTodo(todo.id)}>Delete TODO</Button
       >
     </Card.Footer>
   </Card.Root>
